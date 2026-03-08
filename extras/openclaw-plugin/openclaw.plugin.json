@@ -1,0 +1,19 @@
+{
+  "id": "memorine",
+  "name": "Memorine",
+  "description": "Human-like memory for agents. Facts, events, procedures, and cross-agent sharing with natural decay and learning.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "pythonPath": {
+        "type": "string",
+        "description": "Path to python3 executable (defaults to 'python3')"
+      },
+      "dbPath": {
+        "type": "string",
+        "description": "Path to SQLite database (defaults to ~/.memorine/memorine.db)"
+      }
+    }
+  }
+}

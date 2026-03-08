@@ -1,0 +1,11 @@
+{
+  "name": "memorine",
+  "version": "0.1.0",
+  "private": true,
+  "openclaw": {
+    "extensions": ["./index.ts"]
+  },
+  "dependencies": {
+    "@sinclair/typebox": "0.34.48"
+  }
+}

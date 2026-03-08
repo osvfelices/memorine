@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memorine"
+version = "0.2.0"
+description = "Human-like memory for AI agents. No embeddings, no LLMs, no cost."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "osvfelices"},
+]
+keywords = ["memory", "ai", "agents", "mcp", "cognitive", "semantic-search"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.optional-dependencies]
+embeddings = ["fastembed>=0.3", "sqlite-vec>=0.1"]
+ui = ["textual>=0.50"]
+all = ["fastembed>=0.3", "sqlite-vec>=0.1", "textual>=0.50"]
+
+[project.scripts]
+memorine = "memorine.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/osvfelices/memorine"
+Issues = "https://github.com/osvfelices/memorine/issues"
+
+[tool.setuptools.packages.find]
+include = ["memorine*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
